@@ -1,0 +1,29 @@
+form {
+    margin: 50px
+}
+
+.title {
+    float: center;
+    clear: left;
+    text-align: left;
+}
+
+label {
+    float: left;
+    clear: left;
+    width: 150px;
+    text-align: right;
+    margin-right: 5px;
+}
+
+input {
+    display: block;
+    float: left;
+    margin-bottom: 3px;
+}
+
+button {
+    display: inline-block;
+    margin-left: 5px;
+    clear: left;
+}

@@ -1,0 +1,13 @@
+nav {
+    align-items: stretch;
+    column-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 1.4em;
+    margin: 0 0 .4em 0;
+}

@@ -1,0 +1,34 @@
+form {
+    margin: 50px
+}
+
+.title {
+    float: center;
+    clear: left;
+    text-align: left;
+}
+
+label {
+    float: left;
+    clear: left;
+    width: 150px;
+    text-align: right;
+    margin-right: 5px;
+}
+
+input {
+    display: block;
+    float: left;
+    margin-bottom: 3px;
+}
+
+.ActivityDescription {
+    height: 100px;
+    text-align: justify;
+}
+
+button {
+    display: none;
+    margin-left: 5px;
+    clear: left;
+}
