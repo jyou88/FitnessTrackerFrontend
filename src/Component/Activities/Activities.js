@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style.css'
+import './Activities.css'
 
 const Activities = () => {
     const [activity, setActivity] = useState("");
@@ -14,6 +14,7 @@ const Activities = () => {
                     <div>
                         <label>Activity Name: </label>
                         <input
+                            class="ActivityName"
                             value={activity}
                             type="text"
                             placeholder="name"

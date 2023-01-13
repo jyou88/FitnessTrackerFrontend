@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './style.css'
+import './Routines.css'
 
-const MyRoutines = () => {
+const Routines = () => {
     const [routine, setRoutine] = useState("");
     const [goal, setGoal] = useState("");
     return <>
@@ -14,6 +14,7 @@ const MyRoutines = () => {
                     <div>
                         <label>Routine Name: </label>
                         <input
+                            class="RoutineName"
                             value={routine}
                             type="text"
                             placeholder="add routine"
@@ -23,19 +24,16 @@ const MyRoutines = () => {
                     <div>
                         <label>Goal: </label>
                         <input
-                            class="MyRoutineGoal"
+                            class="RoutineGoal"
                             value={goal}
                             type="text"
                             placeholder="add goal"
                             onChange={(event) => setGoal(event.target.value)}></input>
                     </div>
-                    <div>
-                        <button>Create</button>
-                    </div>
+                    <button>Create</button>
                 </form>
             </header>
         </body>
     </>;
 };
-
-export default MyRoutines;
+export default Routines

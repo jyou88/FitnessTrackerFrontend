@@ -1,6 +1,6 @@
 const baseURL = "https://fitnesstrac-kr.herokuapp.com/";
 const cohort = "2211-FTB-ET-WEB-FT";
-const API_URL = 'https://fitnesstrac-kr.herokuapp.com/api';
+//const API_URL = 'https://fitnesstrac-kr.herokuapp.com/api';
 
 export const registerUser = async (username, password) => {
   try {

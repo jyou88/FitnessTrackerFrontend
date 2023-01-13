@@ -16,11 +16,19 @@ label {
     margin-right: 5px;
 }
 
-input {
+.RoutineName {
     display: block;
     float: left;
     margin-bottom: 3px;
+    width: 250px;
+
 }
+
+.RoutineGoal {
+    height: 100px;
+    width: 250px;
+}
+
 
 button {
     display: inline-block;

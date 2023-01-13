@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './style.css'
+import './MyRoutines.css';
+//import useApi from '../../hooks/useApi';
 
-const Routines = () => {
+const MyRoutines = () => {
     const [routine, setRoutine] = useState("");
     const [goal, setGoal] = useState("");
     return <>
@@ -14,24 +15,29 @@ const Routines = () => {
                     <div>
                         <label>Routine Name: </label>
                         <input
+                            class="MyRoutineName"
                             value={routine}
                             type="text"
-                            placeholder="name"
+                            placeholder="add routine"
                             onChange={(event) => setRoutine(event.target.value)}
                         ></input>
                     </div>
                     <div>
                         <label>Goal: </label>
                         <input
+                            class="MyRoutineGoal"
                             value={goal}
                             type="text"
-                            placeholder="goal"
+                            placeholder="add goal"
                             onChange={(event) => setGoal(event.target.value)}></input>
                     </div>
-                    <button>Create</button>
+                    <div>
+                        <button>Create</button>
+                    </div>
                 </form>
             </header>
         </body>
     </>;
 };
-export default Routines
+
+export default MyRoutines;

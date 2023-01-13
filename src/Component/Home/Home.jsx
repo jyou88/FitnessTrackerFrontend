@@ -1,12 +1,11 @@
 import React from 'react';
-import './style.css'
-import Login from "../Login";
-import Navbar from "../Navbar";
+import './Home.css'
+import Login from "../Login/Login";
+
 
 const Home = () => {
     return <>
         <div>
-            <Navbar />
             <Login />
         </div>
     </>;
