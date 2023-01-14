@@ -9,6 +9,8 @@ import MUILogin from "./components/Login/MUILogin.js";
 import MyRoutines from "./components/MyRoutines/index.js";
 import MUIRegister from "./components/Register/MUIRegister.js";
 
+import UserRoutines from "./components/UserRoutines/index.js";
+
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
 
@@ -23,6 +25,7 @@ function App() {
         <Route path="/myroutines" element={<MyRoutines token={token} />} />
         <Route path="/login" element={<MUILogin />} />
         <Route path="/register" element={<MUIRegister />} />
+        <Route path="/userroutines" element={<UserRoutines />} />
       </Routes>
     </div>
   );

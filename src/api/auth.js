@@ -1,6 +1,3 @@
-const baseURL = "https://fitnesstrac-kr.herokuapp.com/";
-const cohort = "2211-FTB-ET-WEB-FT";
-
 export const registerUser = async (username, password) => {
   try {
     const response = await fetch(
@@ -23,23 +20,6 @@ export const registerUser = async (username, password) => {
   }
 };
 
-export const fetchMe = async (token) => {
-  try {
-    const response = await fetch(`${baseURL}${cohort}/users/me`, {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    });
-
-    const { data } = await response.json();
-    // console.log(data);
-    return data;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
 export const login = async (username, password) => {
   try {
     const verify = await fetch(
@@ -56,6 +36,7 @@ export const login = async (username, password) => {
     console.log(data);
     // right here put the returned data.token into localStorage so that we can use it across our app.
     localStorage.setItem("token", data.token);
+    localStorage.setItem("username", data.user.username);
     return data;
   } catch (error) {
     console.error(error);

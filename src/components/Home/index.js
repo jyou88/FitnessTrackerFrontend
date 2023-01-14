@@ -1,4 +1,3 @@
-import NavBar from "../Navbar";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
