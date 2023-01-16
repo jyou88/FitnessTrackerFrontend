@@ -1,58 +1,34 @@
-// import logo from './logo.svg';
-import './index.css';
-import React from 'react';
-import { createContext, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from "./Component/Home/Home";
-import Activities from "./Component/Activities/Activities";
-import Routines from "./Component/Routines/Routines";
-import MyRoutines from "./Component/MyRoutines/MyRoutines";
-import Navbar from "./Component/Navbar/Navbar";
-import MUILogin from "./Component/Login/Login";
-import MUIRegister from "./Component/Register/Register.js";
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/Navbar/index.js";
+import { Home } from "./components/Home/index.js";
 
+import Routines from "./components/Routines";
+import Activities from "./components/Activities";
+import MUILogin from "./components/Login/MUILogin.js";
+import MyRoutines from "./components/MyRoutines/index.js";
+import MUIRegister from "./components/Register/MUIRegister.js";
 
-export const LoginContext = createContext();
+import UserRoutines from "./components/UserRoutines/index.js";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
-  const [loggedIn, setLoggedIn] = useState(localStorage.access ? true : false);
+
   return (
-    <LoginContext.Provider value={[loggedIn, setLoggedIn]}>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home token={token} setToken={setToken} />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/activities" element={<Activities />} />
-          <Route path="/routines" element={<Routines />} />
-          <Route path="/myroutines" element={<MyRoutines />} />
-          <Route path="/login" element={<MUILogin />} />
-          <Route path="/register" element={<MUIRegister />} />
-        </Routes></div>
-    </LoginContext.Provider>
+    <div className="App">
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home token={token} setToken={setToken} />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/activities" element={<Activities />} />
+        <Route path="/routines" element={<Routines />} />
+        <Route path="/myroutines" element={<MyRoutines token={token} />} />
+        <Route path="/login" element={<MUILogin />} />
+        <Route path="/register" element={<MUIRegister />} />
+        <Route path="/userroutines" element={<UserRoutines />} />
+      </Routes>
+    </div>
   );
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;
